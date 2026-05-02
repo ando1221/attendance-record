@@ -1,0 +1,788 @@
+
+/* =========================
+  Common page
+========================= */
+main {
+    display: block;
+}
+
+.page {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* =========================
+  Attendance top
+========================= */
+.attendance {
+    max-width: 900px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.attendance-status {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 20px;
+    border-radius: 999px;
+    background: #c8c8c8;
+    color: #696969;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.attendance-datetime {
+    margin-top: 32px;
+}
+
+.attendance-date {
+    display: block;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.attendance-time {
+    display: block;
+    margin-top: 32px;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.attendance-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    margin: 64px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.attendance-actions__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button {
+    min-width: 221px;
+    height: 77px;
+    border: none;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.action-button--sub {
+    background: #fff;
+    color: #000;
+}
+
+.attendance-message {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* =========================
+  Table
+========================= */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.table th,
+.table td {
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    font-size: 16px;
+}
+
+.table th {
+    background: #fafafa;
+    font-weight: 700;
+}
+
+/* =========================
+  Attendance list
+========================= */
+.attendance-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.attendance-list__header {
+  margin-bottom: 40px;
+}
+
+.attendance-list__title {
+  margin: 0;
+  padding-left: 16px;
+  border-left: 6px solid #000;
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.attendance-list__month-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding: 18px 24px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.attendance-list__month-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 96px;
+  color: #737373;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.attendance-list__month-link--prev {
+  justify-content: flex-start;
+}
+
+.attendance-list__month-link--next {
+  justify-content: flex-end;
+}
+
+.attendance-list__month-arrow {
+  display: block;
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.attendance-list__month-arrow--next {
+  transform: rotate(180deg);
+}
+
+.attendance-list__month-form {
+  position: relative;
+  margin: 0;
+}
+
+.attendance-list__month-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 180px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.attendance-list__month-calendar {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.attendance-list__month-current {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.attendance-list__month-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.attendance-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #e1e1e1;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #737373;
+  font-weight: bold;
+}
+
+.attendance-table th:nth-child(1),
+.attendance-table td:nth-child(1) {
+  width: 18%;
+}
+
+.attendance-table th:nth-child(2),
+.attendance-table td:nth-child(2),
+.attendance-table th:nth-child(3),
+.attendance-table td:nth-child(3),
+.attendance-table th:nth-child(4),
+.attendance-table td:nth-child(4),
+.attendance-table th:nth-child(5),
+.attendance-table td:nth-child(5) {
+  width: 14%;
+}
+
+.attendance-table td:nth-child(4) {
+  width: 16%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.attendance-table th:nth-child(6),
+.attendance-table td:nth-child(6) {
+  width: 12%;
+}
+
+.attendance-table__detail-link {
+  color: #000;
+  font-weight: bold;
+}
+
+.attendance-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================
+  Attendance calendar nav
+========================= */
+.attendance-list__month-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding: 18px 24px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.attendance-list__month-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 96px;
+  color: #737373;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.attendance-list__month-link--prev {
+  justify-content: flex-start;
+}
+
+.attendance-list__month-link--next {
+  justify-content: flex-end;
+}
+
+.attendance-list__month-arrow {
+  display: block;
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.attendance-list__month-arrow--next {
+  transform: rotate(180deg);
+}
+
+.attendance-list__month-form {
+  position: relative;
+  margin: 0;
+}
+
+.attendance-list__month-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 180px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.attendance-list__month-calendar {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.attendance-list__month-current {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.attendance-list__month-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* =========================
+  Custom calendar picker
+========================= */
+.calendar-picker {
+  position: relative;
+}
+
+.calendar-picker__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 200px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.calendar-picker__icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.calendar-picker__label {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.calendar-picker__panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  z-index: 20;
+  width: 320px;
+  padding: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transform: translateX(-50%);
+}
+
+.calendar-picker__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.calendar-picker__nav {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #f3f3f3;
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.calendar-picker__current {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.calendar-picker__weekdays,
+.calendar-picker__dates,
+.calendar-picker__months {
+  display: grid;
+  gap: 8px;
+}
+
+.calendar-picker__weekdays {
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 8px;
+}
+
+.calendar-picker__weekday {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #737373;
+}
+
+.calendar-picker__weekday--sun {
+  color: #d93025;
+}
+
+.calendar-picker__weekday--sat {
+  color: #2563eb;
+}
+
+.calendar-picker__dates {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-picker__months {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.calendar-picker__cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.calendar-picker__cell:hover {
+  background: #f3f3f3;
+}
+
+.calendar-picker__cell--muted {
+  color: #b5b5b5;
+}
+
+.calendar-picker__cell--sun {
+  color: #d93025;
+}
+
+.calendar-picker__cell--sat {
+  color: #2563eb;
+}
+
+.calendar-picker__cell--selected {
+  background: #000;
+  color: #fff;
+}
+
+.calendar-picker__cell--selected.calendar-picker__cell--sun,
+.calendar-picker__cell--selected.calendar-picker__cell--sat {
+  color: #fff;
+}
+
+/* =========================
+  Request list tabs
+========================= */
+.request-list-tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 80px;
+  margin-top: 32px;
+  padding: 0 46px;
+  border-bottom: 1px solid #737373;
+}
+
+.request-list-tabs__link {
+  display: inline-block;
+  padding: 0 0 12px;
+  color: #737373;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  border-bottom: 3px solid transparent;
+}
+
+.request-list-tabs__link--active {
+  color: #000;
+}
+
+/* =========================
+  Attendance detail
+========================= */
+.page--attendance-detail {
+  max-width: 1000px;
+}
+
+.attendance-detail {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.attendance-detail__header {
+  margin-bottom: 48px;
+}
+
+.attendance-detail__title {
+  margin: 0;
+  padding-left: 16px;
+  border-left: 6px solid #000;
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.attendance-detail__card {
+  padding: 48px 64px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.attendance-detail__list {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.attendance-detail__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 96px;
+  padding: 28px 0;
+  margin: 0 -64px;
+  padding-left: 64px;
+  padding-right: 64px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.attendance-detail__row:first-child {
+  padding-top: 0;
+}
+
+.attendance-detail__row--textarea {
+  align-items: flex-start;
+  border-bottom: none;
+  padding-bottom: 8px;
+}
+
+.attendance-detail__label {
+  flex: 0 0 180px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #737373;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* 基本の値エリア */
+.attendance-detail__value {
+  flex: 1 1 auto;
+  margin: 0;
+  min-width: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* 日付・時刻・備考を同じ幅基準にする */
+.attendance-detail__value--date,
+.attendance-detail__value--time-range,
+.attendance-detail__value--note {
+  flex: 0 0 380px;
+  max-width: 380px;
+}
+
+/* 日付を開始時刻・終了時刻の中央位置に合わせる */
+.attendance-detail__value--date {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  align-items: center;
+}
+
+.attendance-detail__date--year {
+  grid-column: 1;
+  justify-self: center;
+  text-align: center;
+}
+
+.attendance-detail__date--month-day {
+  grid-column: 3;
+  justify-self: center;
+  text-align: center;
+}
+
+/* 時刻入力を備考欄の左右端に合わせる */
+.attendance-detail__value--time-range {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  align-items: center;
+}
+
+.attendance-detail__value--time-range .attendance-detail__input--time:first-of-type {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.attendance-detail__value--time-range .attendance-detail__separator {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.attendance-detail__value--time-range .attendance-detail__input--time:last-of-type {
+  grid-column: 3;
+  justify-self: end;
+}
+
+.attendance-detail__separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.attendance-detail__input {
+  width: 120px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  box-sizing: border-box;
+}
+
+.attendance-detail__input--time {
+  text-align: center;
+}
+
+.attendance-detail__textarea {
+  display: block;
+  width: 100%;
+  height: 80px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.attendance-detail__input:focus,
+.attendance-detail__textarea:focus {
+  outline: none;
+  border-color: #bbbbbb;
+}
+
+.attendance-detail__input--error,
+.attendance-detail__textarea--error {
+  border-color: #cf1322;
+}
+
+.attendance-detail__error {
+  margin: 8px 0 0 276px;
+  color: #cf1322;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.attendance-detail__field {
+  position: relative;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.attendance-detail__error--inline {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 240px;
+  margin: 0;
+  color: #cf1322;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  background: transparent;
+}
+
+.attendance-detail__error--textarea {
+  position: static;
+  display: block;
+  width: 100%;
+  margin: 8px 0 0;
+  color: #cf1322;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.attendance-detail__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 72px;
+  margin-top: 8px;
+}
+
+.attendance-detail__pending {
+  margin: 0;
+  color: #cf1322;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.attendance-detail__button--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+

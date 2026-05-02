@@ -1,0 +1,9 @@
+docker/mysql/data/
+
+src/vendor/
+src/node_modules/
+src/.env
+src/.env.backup
+src/.env.production
+src/.env.testing
+src/.phpunit.result.cache
