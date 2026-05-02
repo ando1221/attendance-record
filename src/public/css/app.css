@@ -29,7 +29,7 @@ main {
     background: #c8c8c8;
     color: #696969;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 1;
 }
 
@@ -40,7 +40,6 @@ main {
 .attendance-date {
     display: block;
     font-size: 40px;
-    font-weight: 400;
     line-height: 1.4;
 }
 
@@ -48,7 +47,7 @@ main {
     display: block;
     margin-top: 32px;
     font-size: 80px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 1;
 }
 
@@ -76,7 +75,7 @@ main {
     background: #000;
     color: #fff;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .action-button--sub {
@@ -87,7 +86,7 @@ main {
 .attendance-message {
     margin: 0;
     font-size: 26px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 1.5;
 }
 
@@ -110,7 +109,7 @@ main {
 
 .table th {
     background: #fafafa;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 /* =========================
@@ -152,7 +151,7 @@ main {
   min-width: 96px;
   color: #737373;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
 }
 
@@ -202,7 +201,7 @@ main {
 .attendance-list__month-current {
   color: #000;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   white-space: nowrap;
 }
@@ -292,7 +291,7 @@ main {
   min-width: 96px;
   color: #737373;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
 }
 
@@ -342,7 +341,7 @@ main {
 .attendance-list__month-current {
   color: #000;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   white-space: nowrap;
 }
@@ -384,7 +383,7 @@ main {
 .calendar-picker__label {
   color: #000;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   white-space: nowrap;
 }
@@ -418,7 +417,7 @@ main {
   background: #f3f3f3;
   color: #000;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   cursor: pointer;
 }
@@ -426,7 +425,7 @@ main {
 .calendar-picker__current {
   color: #000;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
 }
 
@@ -445,7 +444,7 @@ main {
 .calendar-picker__weekday {
   text-align: center;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: bold;
   color: #737373;
 }
 
@@ -475,7 +474,7 @@ main {
   background: transparent;
   color: #000;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -595,7 +594,7 @@ main {
   flex: 0 0 180px;
   margin: 0;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.4;
   color: #737373;
   display: inline-block;
@@ -608,7 +607,7 @@ main {
   margin: 0;
   min-width: 0;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.4;
 }
 
@@ -666,7 +665,7 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
 }
 
@@ -679,7 +678,7 @@ main {
   background: #fff;
   color: #000;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 40px;
   box-sizing: border-box;
 }
@@ -699,7 +698,7 @@ main {
   background: #fff;
   color: #000;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.6;
   resize: none;
   box-sizing: border-box;
@@ -713,14 +712,14 @@ main {
 
 .attendance-detail__input--error,
 .attendance-detail__textarea--error {
-  border-color: #cf1322;
+  border-color: #d9d9d9;
 }
 
 .attendance-detail__error {
   margin: 8px 0 0 276px;
   color: #cf1322;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.5;
 }
 
@@ -740,12 +739,12 @@ main {
   margin: 0;
   color: #cf1322;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.5;
   text-align: left;
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
   background: transparent;
 }
 
@@ -756,12 +755,13 @@ main {
   margin: 8px 0 0;
   color: #cf1322;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.5;
   text-align: left;
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  overflow-x: auto;
 }
 
 .attendance-detail__actions {
@@ -776,7 +776,7 @@ main {
   margin: 0;
   color: #cf1322;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.5;
   text-align: right;
 }

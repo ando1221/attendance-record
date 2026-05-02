@@ -156,7 +156,7 @@ password: password<br>
 | 論理名 | カラム名 | 型 | PK | NOT NULL | UNIQUE | FK |
 |---|---|---|---|---|---|---|
 | 勤怠ID | id | unsigned bigint | ○ | ○ |  |  |
-| ユーザー | user_id | unsigned bigint |  | ○ |  | users(id) |
+| ユーザー | user_id | unsigned bigint |  | ○ | ○ ※  | users(id) |
 | 現在の勤怠状態 | status_id | unsigned bigint |  | ○ |  | attendance_statuses(id) |
 | この勤務をどの日の勤務として扱うか | work_date | date |  | ○ | ○ ※ |  |
 | 実際の出勤日時 | clock_in_at | datetime |  |  |  |  |
